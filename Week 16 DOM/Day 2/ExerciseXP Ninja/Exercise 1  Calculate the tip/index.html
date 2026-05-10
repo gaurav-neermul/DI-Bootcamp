@@ -13,7 +13,7 @@
         <div id="calculator">
             <form>
                 <p>How much was your bill?</p>
-                $ <input id="billamt" type="text" placeholder="Bill Amount">
+                $ <input id="billamt" type="number" placeholder="Bill Amount">
 
                 <p>How was your service?</p>
                 <select id="serviceQual">
@@ -27,8 +27,8 @@
             </form>
 
             <p>How many people are sharing the bill?</p>
-            <input id="peopleamt" type="text" placeholder="Number of People"> people
-            <button type="button" id="calculate">Calculate!</button>
+            <input id="peopleamt" type="number" placeholder="Number of People"> people
+            <button type="button" id="calculate" onclick="calculateTip()">Calculate!</button>
 
         </div>
         <!--calculator end-->
