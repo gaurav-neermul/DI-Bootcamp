@@ -17,11 +17,14 @@ body {
     cursor: pointer;
 }
 
-#grid{
+#grid {
+
     display: grid;
-    grid-template-columns: repeat(60,1fr);
-    height: 100vh;
-    padding: 5px 5px 5px 0;
+
+    grid-template-columns: repeat(20, 25px);
+
+    gap: 2px;
+
 }
 
 .square {
