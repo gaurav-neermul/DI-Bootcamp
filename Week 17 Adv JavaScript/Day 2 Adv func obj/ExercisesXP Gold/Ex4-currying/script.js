@@ -5,3 +5,4 @@ const add5 = curriedSum(5)
 add5(12)
 
 //17
+

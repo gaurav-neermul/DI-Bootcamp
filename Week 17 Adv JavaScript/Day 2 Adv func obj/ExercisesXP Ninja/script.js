@@ -10,4 +10,4 @@ console.log(
 
 console.log(
     mergeWords("There")("is")("no")("spoon.")()
-);
+);   
