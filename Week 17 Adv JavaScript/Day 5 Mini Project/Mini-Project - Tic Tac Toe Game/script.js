@@ -37,5 +37,19 @@ function playerMove(event){
     if(gameOver) return;
     const index = event.target.id; //Gets clicked cell's ID.
     if(board[index] !=="") return;//if not empty, stop
+    board[index] = player  //stores player symbol
+    event.target.textContent = player 
+
+    if(checkWinner(player)){
+        endGame("You Win!")
+        return
+    }
+
+    if(isFinite()){
+        endGame("Tie Game")
+        return
+    }
+
+    computerMove()
 
 }
