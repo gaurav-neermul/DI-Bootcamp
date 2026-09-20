@@ -1,55 +1,43 @@
-var allowed_keys=[65,83,68,70,71,72,74,75,76,32,66]; //array that contains allowed key codes
+var allowed_keys = [65, 83, 68, 70, 71, 72, 74, 75, 76, 32, 66]; //array that contains allowed key codes
 
-window.addEventListener("keydown",function(event){ //add keyboard event listener to browser window
+window.addEventListener("keydown", function (event) {
+  //add keyboard event listener to browser window
 
-var keyCode=event.keyCode;
+  var keyCode = event.keyCode;
 
-if(!allowed_keys.includes(keyCode)){
-return;
-}
+  if (!allowed_keys.includes(keyCode)) {
+    return;
+  }
 
-event.preventDefault();
+  event.preventDefault();
 
-event.stopPropagation();
+  event.stopPropagation();
 
-playAudio(keyCode);
-
+  playAudio(keyCode);
 });
 
-var drums=document.getElementsByClassName("drum");
+var drums = document.getElementsByClassName("drum");
 
-for(var i=0;i<drums.length;i++){
+for (var i = 0; i < drums.length; i++) {
+  drums[i].addEventListener("click", function () {
+    var keyCode = this.getAttribute("data-key");
 
-drums[i].addEventListener("click",function(){
-
-var keyCode=this.getAttribute("data-key");
-
-playAudio(keyCode);
-
-});
-
+    playAudio(keyCode);
+  });
 }
 
-function playAudio(keyCode){
+function playAudio(keyCode) {
+  var note = document.querySelector("audio[data-key='" + keyCode + "']");
 
-var note=document.querySelector(
-"audio[data-key='"+keyCode+"']"
-);
+  var drum = document.querySelector(".drum[data-key='" + keyCode + "']");
 
-var drum=document.querySelector(
-".drum[data-key='"+keyCode+"']"
-);
+  note.currentTime = 0;
 
-note.currentTime=0;
+  drum.classList.add("playing");
 
-drum.classList.add("playing");
+  setTimeout(function () {
+    drum.classList.remove("playing");
+  }, 100);
 
-setTimeout(function(){
-
-drum.classList.remove("playing");
-
-},100);
-
-note.play();
-
+  note.play();
 }

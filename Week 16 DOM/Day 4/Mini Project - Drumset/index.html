@@ -1,87 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drumset</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="overlay"></div> <!-- Creates dark transparent layer over background image. -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drumset</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <!-- Creates dark transparent layer over background image. -->
 
-<div class="container">
+    <div class="container">
+      <div class="drum" data-key="65">
+        <kbd>A</kbd>
+        <span>BOOM</span>
+      </div>
 
-<div class="drum" data-key="65">
-<kbd>A</kbd>
-<span>BOOM</span>
-</div>
+      <div class="drum" data-key="83">
+        <kbd>S</kbd>
+        <span>CLAP</span>
+      </div>
 
-<div class="drum" data-key="83">
-<kbd>S</kbd>
-<span>CLAP</span>
-</div>
+      <div class="drum" data-key="68">
+        <kbd>D</kbd>
+        <span>HIHAT</span>
+      </div>
 
-<div class="drum" data-key="68">
-<kbd>D</kbd>
-<span>HIHAT</span>
-</div>
+      <div class="drum" data-key="70">
+        <kbd>F</kbd>
+        <span>KICK</span>
+      </div>
 
-<div class="drum" data-key="70">
-<kbd>F</kbd>
-<span>KICK</span>
-</div>
+      <div class="drum" data-key="71">
+        <kbd>G</kbd>
+        <span>OPENHAT</span>
+      </div>
 
-<div class="drum" data-key="71">
-<kbd>G</kbd>
-<span>OPENHAT</span>
-</div>
+      <div class="drum" data-key="72">
+        <kbd>H</kbd>
+        <span>RIDE</span>
+      </div>
 
-<div class="drum" data-key="72">
-<kbd>H</kbd>
-<span>RIDE</span>
-</div>
+      <div class="drum" data-key="74">
+        <kbd>J</kbd>
+        <span>SNARE</span>
+      </div>
 
-<div class="drum" data-key="74">
-<kbd>J</kbd>
-<span>SNARE</span>
-</div>
+      <div class="drum" data-key="75">
+        <kbd>K</kbd>
+        <span>TINK</span>
+      </div>
 
-<div class="drum" data-key="75">
-<kbd>K</kbd>
-<span>TINK</span>
-</div>
+      <div class="drum" data-key="76">
+        <kbd>L</kbd>
+        <span>TOM</span>
+      </div>
+      <!-- self added -->
+      <div class="drum" data-key="32">
+        <kbd>␣</kbd>
+        <span>FAAA!</span>
+      </div>
 
-<div class="drum" data-key="76">
-<kbd>L</kbd>
-<span>TOM</span>
-</div>
-<!-- self added -->
-<div class="drum" data-key="32"> 
-<kbd>␣</kbd>
-<span>FAAA!</span>
-</div>
+      <div class="drum" data-key="66">
+        <kbd>B</kbd>
+        <span>Ba Ba Banana</span>
+      </div>
+    </div>
 
-<div class="drum" data-key="66"> 
-<kbd>B</kbd>
-<span>Ba Ba Banana</span>
-</div>
+    <audio data-key="65" src="sounds/boom.wav"></audio>
+    <audio data-key="83" src="sounds/clap.wav"></audio>
+    <audio data-key="68" src="sounds/hihat.wav"></audio>
+    <audio data-key="70" src="sounds/kick.wav"></audio>
+    <audio data-key="71" src="sounds/openhat.wav"></audio>
+    <audio data-key="72" src="sounds/ride.wav"></audio>
+    <audio data-key="74" src="sounds/snare.wav"></audio>
+    <audio data-key="75" src="sounds/tink.wav"></audio>
+    <audio data-key="76" src="sounds/tom.wav"></audio>
+    <!-- self added -->
+    <audio data-key="32" src="sounds/fahhhhhhhhhhhhhh.mp3"></audio>
+    <audio data-key="66" src="sounds/banana-song2.mp3"></audio>
 
-
-</div>
-
-<audio data-key="65" src="sounds/boom.wav"></audio>
-<audio data-key="83" src="sounds/clap.wav"></audio>
-<audio data-key="68" src="sounds/hihat.wav"></audio>
-<audio data-key="70" src="sounds/kick.wav"></audio>
-<audio data-key="71" src="sounds/openhat.wav"></audio>
-<audio data-key="72" src="sounds/ride.wav"></audio>
-<audio data-key="74" src="sounds/snare.wav"></audio>
-<audio data-key="75" src="sounds/tink.wav"></audio>
-<audio data-key="76" src="sounds/tom.wav"></audio>
-<!-- self added -->
-<audio data-key="32" src="sounds/fahhhhhhhhhhhhhh.mp3"></audio>
-<audio data-key="66" src="sounds/banana-song2.mp3"></audio>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
