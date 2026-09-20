@@ -1,4 +1,4 @@
-var allowed_keys = [65, 83, 68, 70, 71, 72, 74, 75, 76, 32, 66]; //array that contains allowed key codes
+var allowed_keys = [65, 83, 68, 70, 71, 72, 74, 75, 76, 32, 66,69]; //array that contains allowed key codes
 
 window.addEventListener("keydown", function (event) {
   //add keyboard event listener to browser window
