@@ -35,7 +35,7 @@ function setDifficulty(level){
 
 function playerMove(event){
     if(gameOver) return;
-    const index = event.target.id; //Gets clicked cell's ID.
+    const index = event.target.id; //Gets clicked cell's ID. 
     if(board[index] !=="") return;//if not empty, stop
     board[index] = player  //stores player symbol
     event.target.textContent = player 
@@ -52,4 +52,48 @@ function playerMove(event){
 
     computerMove()
 
+}
+function computerMove(){
+    if(gameOver) return;
+
+    let move;
+
+    if(difficulty === "easy") {
+        move = randomMove()
+    }else{
+        move = hardMove()
+    }
+
+    board[move] = computer 
+    document.getElementById(move).textContent = computer;
+
+    if(checkWinner(computer)){
+        endGame("Computer Wins!")
+        return
+    }
+    if(isTie()){
+        endGame("Tie Game")
+    }
+}
+
+function randomMove(){
+    const available = board.reduce((arr,value,index)=>{
+        if(value === ""){
+            arr.push(index)
+        }
+        return arr
+    },[])
+
+    return available[
+        Math.floor(Math.random()*available.length)
+    ]
+}
+
+function hardMove(){
+    for(let combo of winCombos){
+        const [a,b,c] = combo
+        const line = [board[a],board[b],board[c]];
+
+        if(line.filter(x=>x===player))
+    }
 }
