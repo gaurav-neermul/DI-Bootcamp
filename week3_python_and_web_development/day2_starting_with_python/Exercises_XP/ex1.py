@@ -1,10 +1,10 @@
-print("hello world")
-print("TEST")
-print("TEST")
-print("TEST")
-print("TEST")
-print("TEST")
-print("TEST")
-name = "testgi"
+# Exercise 1: Hello World
+# Instructions
+# Print the following output using one line of code:
 
-print("Final testing")
+# Hello world
+# Hello world
+# Hello world
+# Hello world
+
+print("\n Hello World" *4)
